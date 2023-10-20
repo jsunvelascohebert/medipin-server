@@ -22,7 +22,7 @@ public class AppConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry){
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000")
+                        .allowedOrigins("https://medipin-client-29ba1901c9d4.herokuapp.com")
                         .allowedMethods("*");
             }
         };
