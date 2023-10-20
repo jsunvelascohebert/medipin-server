@@ -1,0 +1,11 @@
+@url = https://health.gov/myhealthfinder/api/v3
+
+### search by keyword
+
+GET {{url}}/topicsearch.json?keyword=diabetes HTTP/1.1
+
+### search by category id (article id)
+
+GET {{url}}/topicsearch.json?topicId=537 HTTP/1.1
+
+

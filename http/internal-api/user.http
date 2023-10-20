@@ -1,0 +1,21 @@
+@url = http://localhost:8080/api
+
+### test adding new account
+
+POST {{url}}/create_account HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "testernator30",
+    "password" : "P@ssw0rd!"
+}
+
+### test authenticate
+
+POST {{url}}/authenticate HTTP/1.1
+Content-Type: application/json
+
+{
+    "username" : "testernator30",
+    "password" : "P@ssw0rd!"
+}

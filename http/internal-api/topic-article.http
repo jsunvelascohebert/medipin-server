@@ -1,0 +1,19 @@
+@url = http://localhost:8080/api/topic/article
+
+### test get by topic id
+
+GET {{url}}/1 HTTP/1.1
+
+### test post
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "topicId" : 1,
+    "articleId" : 30617
+}
+
+### test delete by key
+
+DELETE {{url}}/1/30617 HTTP/1.1 

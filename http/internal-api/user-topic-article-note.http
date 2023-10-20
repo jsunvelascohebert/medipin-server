@@ -1,0 +1,21 @@
+@url = http://localhost:8080/api/user/topic/article/note
+
+### test get by key
+
+GET {{url}}/1/1/30617 HTTP/1.1
+
+### test post
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "userId" : 1,
+    "topicId" : 1,
+    "articleId" : 30617,
+    "noteId" : 2
+}
+
+### test delete by key
+
+DELETE {{url}}/1/1/30617/2 HTTP/1.1

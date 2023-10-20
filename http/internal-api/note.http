@@ -1,0 +1,61 @@
+@url = http://localhost:8080/api/note
+
+### test get all
+
+GET {{url}} HTTP/1.1
+
+### test get by existing id
+
+GET {{url}}/2 HTTP/1.1
+
+### test by missing id
+
+GET {{url}}/1100 HTTP/1.1
+
+### test valid add
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "noteId" : 0,
+    "text" : "testing post 3",
+    "datetimeMade" : "2023-07-23T12:34:56"
+}
+
+### test invalid add
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "noteId" : 1,
+    "text" : "testing a post",
+    "datetimeMade" : "2023-07-23T12:34:56"
+}
+
+### test valid update
+
+PUT {{url}}/2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "noteId" : 2,
+    "text" : "testing post 1",
+    "datetimeMade" : "2023-07-23T12:34:56"
+}
+
+### test invalid update
+
+PUT {{url}}/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "noteId" : 100,
+    "text" : "testing post 100",
+    "datetimeMade" : "2023-07-23T12:34:56"
+}
+
+### test valid delete
+
+DELETE {{url}}/1 HTTP/1.1

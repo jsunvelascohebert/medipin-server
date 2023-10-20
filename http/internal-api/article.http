@@ -1,0 +1,37 @@
+@url = http://localhost:8080/api/article
+
+### test get all
+
+GET {{url}} HTTP/1.1
+
+### test get by id
+
+GET {{url}}/30617 HTTP/1.1
+
+### test post
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "articleId" : 30617,
+    "title" : "Obesity, Physical Activity, Nutrition and Physical Activity",
+    "imageUrl" : "https://health.gov/sites/default/files/2022-06/sadp.jpg",
+    "imageAlt" : "A pregnant woman exercising."
+}
+
+### test put
+
+PUT {{url}}/30617 HTTP/1.1
+Content-Type: application/json
+
+{
+    "articleId" : 30617,
+    "title" : "test update",
+    "imageUrl" : "test update",
+    "imageAlt" : "test update"
+}
+
+### test delete
+
+DELETE {{url}}/30617 HTTP/1.1
