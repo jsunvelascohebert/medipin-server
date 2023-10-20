@@ -1,1 +1,1 @@
-web: java -jar target/medipin.jar
+web: java -jar target/medipin-server.jar
