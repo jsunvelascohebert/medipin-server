@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("https://medipin-client-29ba1901c9d4.herokuapp.com")
 @RequestMapping("/api/topic/article")
 public class TopicArticleController {
 

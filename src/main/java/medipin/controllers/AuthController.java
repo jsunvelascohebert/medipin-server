@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("https://medipin-client-29ba1901c9d4.herokuapp.com")
 @RequestMapping("/security")
 @ConditionalOnWebApplication
 public class AuthController {
